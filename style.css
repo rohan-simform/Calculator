@@ -1,4 +1,3 @@
-/* ===== BASE ===== */
 
 body {
     background:#f3f3f3;
@@ -8,8 +7,6 @@ body {
     width:380px;
     max-width:98vw;
 }
-
-/* ===== DISPLAY ===== */
 
 #main-display{
     font-size:56px;
@@ -22,7 +19,9 @@ body {
     font-size:13px;
 }
 
-/* ===== BUTTONS ===== */
+#equal{
+    background:#cce5ff;
+}
 
 .key,
 .drop-key{
@@ -42,8 +41,6 @@ body {
     border:none;
 }
 
-/* ===== DROPDOWN GRID ===== */
-
 .drop-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -59,8 +56,6 @@ body {
     min-width:200px;
 }
 
-/* ===== TOGGLE BAR ===== */
-
 .toggle-bar button{
     font-size:12px;
     border:none;
@@ -74,7 +69,13 @@ body {
     border-bottom:2px solid #000;
 }
 
-/* ========= DARK MODE ========= */
+#history-box{
+    display:none; 
+    max-height:150px; 
+    overflow-y:auto;
+}
+
+/*DARK MODE*/
 body.dark{
     background:#1a1f2b;
     color:#e0e0e0;

@@ -112,8 +112,7 @@
                         data-value="±"><sup>+</sup>/<sub>-</sub></button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="0">0</button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value=".">.</button></div>
-                <div class="col"><button class="key w-100 btn text-primary fw-semibold" style="background:#cce5ff;"
-                        data-value="=">=</button></div>
+                <div class="col"><button class="key w-100 btn text-primary fw-semibold" id="equal" data-value="=">=</button></div>
             </div>
         </div>
         <div class="px-2 pb-2 border-top">
@@ -121,8 +120,7 @@
                 <button class="btn btn-outline-secondary btn-sm" id="toggleHistory">Show / Hide History</button>
                 <button class="btn btn-outline-danger btn-sm" id="clearHistory">Clear History</button>
             </div>
-            <div id="history-box" style="display:none; max-height:150px; overflow-y:auto;"
-                class="border rounded p-2 bg-light mt-2">
+            <div id="history-box" class="border rounded p-2 bg-light mt-2">
                 <ul id="history-list" class="list-unstyled mb-0 small">
                     <li class="text-muted">No history yet.</li>
                 </ul>
