@@ -11,14 +11,17 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center min-vh-100">
-    <div class="calc-wrap bg-white shadow-sm">
-        <div class="bg-white px-3 pt-4 pb-1">
+    <div class="calc-wrap bg-white shadow-sm" id="calcWrap">
+        <div class="bg-white px-3 pt-4 pb-1" id="displayBox">
             <div id="expr-display" class="text-end text-muted small"></div>
             <div id="main-display" class="text-end text-dark pb-2">0</div>
         </div>
         <div class="toggle-bar d-flex gap-1 px-3 pb-1 border-bottom">
             <button id="btn-deg" class="active">DEG</button>
             <button id="btn-fe" class="ms-2">F-E</button>
+            <button id="darkToggle" class="ms-auto">
+                <i class="bi bi-moon"></i>
+            </button>
         </div>
         <div class="row g-0 px-2 py-1 border-bottom">
             <div class="col"><button class="mem-btn btn btn-light w-100" id="MC">MC</button></div>
@@ -63,7 +66,8 @@
                 <div class="col"><button class="key btn btn-light w-100" data-value="pi">&pi;</button></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="e">e</button></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="C">C</button></div>
-                <div class="col"><button class="key btn btn-light w-100" data-value="Backspace"><i class="bi bi-backspace"></i></button></div>
+                <div class="col"><button class="key btn btn-light w-100" data-value="Backspace"><i
+                            class="bi bi-backspace"></i></button></div>
 
                 <div class="col-12"></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="pow">x<sup>2</sup></button></div>
@@ -73,7 +77,8 @@
                 <div class="col"><button class="key btn btn-light w-100" data-value="mod">mod</button></div>
 
                 <div class="col-12"></div>
-                <div class="col"><button class="key btn btn-light w-100" data-value="sqrt"><sup>2</sup>&radic;x</button></div>
+                <div class="col"><button class="key btn btn-light w-100" data-value="sqrt"><sup>2</sup>&radic;x</button>
+                </div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="(">(</button></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value=")">)</button></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="fact"><i>n</i>!</button></div>
@@ -87,7 +92,8 @@
                 <div class="col"><button class="key btn btn-light w-100" data-value="*">&times;</button></div>
 
                 <div class="col-12"></div>
-                <div class="col"><button class="key btn btn-light w-100" data-value="tenpow">10<sup>x</sup></button></div>
+                <div class="col"><button class="key btn btn-light w-100" data-value="tenpow">10<sup>x</sup></button>
+                </div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="4">4</button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="5">5</button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="6">6</button></div>
@@ -102,10 +108,12 @@
 
                 <div class="col-12"></div>
                 <div class="col"><button class="key btn btn-light w-100" data-value="ln">ln</button></div>
-                <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="±"><sup>+</sup>/<sub>-</sub></button></div>
+                <div class="col"><button class="key btn btn-light w-100 fw-semibold"
+                        data-value="±"><sup>+</sup>/<sub>-</sub></button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value="0">0</button></div>
                 <div class="col"><button class="key btn btn-light w-100 fw-semibold" data-value=".">.</button></div>
-                <div class="col"><button class="key w-100 btn text-primary fw-semibold" style="background:#cce5ff;" data-value="=">=</button></div>
+                <div class="col"><button class="key w-100 btn text-primary fw-semibold" style="background:#cce5ff;"
+                        data-value="=">=</button></div>
             </div>
         </div>
         <div class="px-2 pb-2 border-top">
@@ -113,7 +121,8 @@
                 <button class="btn btn-outline-secondary btn-sm" id="toggleHistory">Show / Hide History</button>
                 <button class="btn btn-outline-danger btn-sm" id="clearHistory">Clear History</button>
             </div>
-            <div id="history-box" style="display:none; max-height:150px; overflow-y:auto;" class="border rounded p-2 bg-light mt-2">
+            <div id="history-box" style="display:none; max-height:150px; overflow-y:auto;"
+                class="border rounded p-2 bg-light mt-2">
                 <ul id="history-list" class="list-unstyled mb-0 small">
                     <li class="text-muted">No history yet.</li>
                 </ul>
