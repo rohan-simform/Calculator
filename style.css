@@ -1,0 +1,140 @@
+
+body {
+    background:#f3f3f3;
+}
+
+.calc-wrap{
+    width:380px;
+    max-width:98vw;
+}
+
+#main-display{
+    font-size:56px;
+    font-weight:200;
+    line-height:1;
+}
+
+#expr-display{
+    min-height:22px;
+    font-size:13px;
+}
+
+#equal{
+    background:#cce5ff;
+}
+
+.key,
+.drop-key{
+    height:52px;
+    font-size:14px;
+    border:none;
+    border-radius:4px;
+}
+
+.key:hover,
+.drop-key:hover{
+    filter:brightness(.93);
+}
+
+.mem-btn{
+    font-size:12px;
+    border:none;
+}
+
+.drop-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:4px;
+    padding:6px;
+}
+
+.drop-grid.cols-2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.dropdown-menu{
+    min-width:200px;
+}
+
+.toggle-bar button{
+    font-size:12px;
+    border:none;
+    background:none;
+    color:#555;
+    padding:2px 8px;
+}
+
+.toggle-bar button.active{
+    color:#000;
+    border-bottom:2px solid #000;
+}
+
+#history-box{
+    display:none; 
+    max-height:150px; 
+    overflow-y:auto;
+}
+
+/*DARK MODE*/
+body.dark{
+    background:#1a1f2b;
+    color:#e0e0e0;
+}
+
+body.dark .calc-wrap{
+    background:#2d3748;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+
+body.dark .bg-white{
+    background:#2d3748 !important;
+}
+
+body.dark #main-display,
+body.dark #expr-display{
+    background:#1e232d;
+    color:#e0e0e0;
+    border:1px solid #3a4556;
+}
+
+body.dark .text-dark{
+    color:#e0e0e0 !important;
+}
+
+body.dark .text-muted{
+    color:#7a8498 !important;
+}
+
+body.dark .btn-light,
+body.dark .key,
+body.dark .drop-key{
+    background:#3a4556;
+    color:#e0e0e0;
+    border:1px solid #4a556a;
+}
+
+body.dark .btn-light:hover,
+body.dark .key:hover,
+body.dark .drop-key:hover{
+    background:#4a556a;
+}
+
+body.dark .dropdown-menu{
+    background:#2d3748;
+    border:1px solid #4a556a;
+}
+
+body.dark .toggle-bar button{
+    color:#b0b8c4;
+}
+
+body.dark .toggle-bar button.active{
+    color:#e0e0e0;
+    border-bottom-color:#ff9800;
+}
+
+body.dark .border,
+body.dark .border-top,
+body.dark .border-bottom{
+    border-color:#3a4556 !important;
+}
